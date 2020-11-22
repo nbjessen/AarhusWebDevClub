@@ -1,0 +1,228 @@
+﻿body {
+    background-color: #999;
+    height: 100%;
+    margin: 0;
+}
+
+.body{
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 71.5vh;
+    margin: 0 auto -50px;
+}
+
+/*Members*/
+.members{
+    width: 25%;
+    background-color: #CCC;
+    padding: 20px;
+    border-radius: 5px;
+}
+.memberImg {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+}
+.members p {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.memberGroup{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+/*Title*/
+.title h1 {
+    padding-left: 50px;
+    padding-top: 50px;
+    color: #FFF;
+    text-shadow: 2px 2px 1px #111;
+}
+/*Navigation*/
+.topnav {
+    overflow: hidden;
+    background-color: #1D1D1D;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #00CC00;
+    color: #fff;
+    border-radius: 0;
+}
+
+.topnav ul li {
+    display: inline;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+}
+
+.nav-pills .nav-link.active {
+    color: #FFF;
+    background-color: #00CC00;
+}
+/*Footer*/
+footer{
+    padding: 13px;
+    color: #FFF;
+    text-align: center;
+    background-color: rgba(0,0,0,0.80);
+    overflow: hidden;
+}
+.footer, .push{
+    height: 50px;
+}
+/*Articles - Projects Main*/
+.itemBox {
+    width: 400px;
+    background-color: #CCCCCC99;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    list-style: none;
+}
+.itemBox p, ul{
+    margin: 0;
+    list-style: none
+}
+.itemBox a {
+    color: #FFF;
+    text-shadow: 1px 1px 1px #111;
+}
+.itemBox a:hover {
+    color: #00CC00;
+    text-shadow: 1px 1px 1px #000;
+    transition: 0.3s;
+}
+/*Article - Project Item*/
+.mainContent{
+    width: 50%
+}
+/*Homepage*/
+.welcome h2 {
+    font-size: 20px;
+    color: #FFF;
+    text-shadow: 2px 2px 1px #111;
+}
+.homeRight{
+    margin-top: 50px;
+    width: 50%;
+    float: right;
+}
+.homeLeft {
+    margin-top: 50px;
+    width: 50%;
+    float: left;
+}
+.homeLeft h2, .homeRight h2 {
+    color: #FFF;
+    text-shadow: 2px 2px 1px #111;
+}
+.homeBackground {
+    width: 100%;
+    position: fixed;
+    z-index: -5;
+    padding: 110vh;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: 210vh;
+    margin-left: -50px;
+    margin-top: -320px;
+}
+/*Login / Logout*/
+.login {
+    margin-top: 50px;
+    color: #FFF; 
+    text-shadow: 1px 1px 1px #111;
+}
+/*Tags*/
+.tags li a {
+    color: #FFF;
+    text-shadow: 1px 1px 1px #111;
+}
+.tags li a:hover {
+    color: #00CC00;
+    text-shadow: 1px 1px 1px #000;
+    transition: 0.3s;
+}
+/*About*/
+.aboutHeadline {
+    color: #FFF;
+    text-shadow: 2px 2px 1px #111;
+}
+.aboutImg img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500;
+    height: auto
+}
+.aboutParagraph {
+    margin-bottom: 50px;
+}
+.aboutColumn{
+    margin-bottom: 50px;
+}
+/*Comments*/
+.comment {
+    width: 25%;
+    background-color: #CCC;
+    padding: 20px;
+    border-radius: 5px;
+}
+.commentGroup {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+/*Contact us*/
+.contactform{
+    color: #000;    
+    width: 50%;
+    margin-top: 50px;
+}
+/*register*/
+.register{
+    margin-top: 50px;
+}
+.register input{
+    width: 25%;
+    margin-left: 20px
+}
+.register label{
+    color: #FFF
+}
+/*Event*/
+.event {
+    margin-top: 50px;
+    width: 50%;
+}
+.eventtitle {
+    color: #FFF;
+    text-shadow: 1px 1px 1px #111;
+}
+.eventtitle:hover {
+    color: #00CC00;
+    text-shadow: 1px 1px 1px #000;
+    transition: 0.3s;
+}
+.speakers {
+    color: #FFF;
+    text-shadow: 1px 1px 1px #111;
+}
+.speakerBox{
+    width: 50%;
+}

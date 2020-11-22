@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.UserComments>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("86c10ff1-cf4b-436b-8a5d-87aa881a344c"))
+    .ChildrenOfType("comment")
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate);
+}
+<ul>
+    <div class="commentGroup"
+	@foreach (var item in selection)
+	{
+		<li>
+			<p class="comment"><b>Username:</b> @item.Value("username")<br/> 
+			<b>Email:</b> @item.Value("email")<br/> 
+			<b>Subject:</b> @item.Value("subject")<br/> 
+			<b>Message:</b> @item.Value("message")</p>
+		</li>
+	}
+	<div/>
+</ul>
+

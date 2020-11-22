@@ -1,0 +1,14 @@
+﻿{
+    "dashboards":  [
+        {
+            "alias": "Welcome Nicolai",
+            "view":  "/App_Plugins/CustomWelcomeDashboard/WelcomeDashboard.html",
+            "sections":  [ "content" ],
+            "weight": -10,
+            "access": [
+                { "deny": "translator" },
+                { "grant": "admin" }
+            ]
+        }
+    ]
+}

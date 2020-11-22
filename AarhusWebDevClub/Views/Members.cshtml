@@ -1,0 +1,64 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Members>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@using Umbraco.Core.Models;
+@using Umbraco.Core.Services;
+@{
+	Layout = "master.cshtml";
+}
+
+@{
+var memberService = Services.MemberService;
+
+var members = memberService.GetMembersByGroup("Active");
+
+var prospects =  memberService.GetMembersByGroup("Prospect");
+
+}
+
+<div class="memberGroup">
+    
+    <h2>Active Members</h2>
+    
+    @foreach (var member in members) 
+    {
+        <div class="members">
+            @{var memberImage = member.GetValue<string>("photo");}
+            <img class="memberImg" src="@(memberImage != null ? memberImage : "")" />
+            <p>
+                <b>Name:</b> @(member.GetValue("firstname") + " "
+                + member.GetValue("lastname")) <br/>
+                
+                <b>Address:</b> @member.GetValue("address")<br />
+                
+                <b>City:</b> @(member.GetValue("zip") + " "
+                + member.GetValue("city"))<br/>
+                
+                <b>Mobile:</b> @member.GetValue("mobile")<br/>
+                
+                <b>Last Online:</b> @member.GetValue("umbracoMemberLastLogin")
+            </p>
+        </div>
+    }
+    
+</div>
+
+<div class="memberGroup">
+    
+    <h2>Prospect Members</h2>
+    
+    @foreach (var member in prospects) 
+    {
+        <div class="members">
+            <p>
+                <b>Name:</b> @(member.GetValue("firstname") + " "
+                + member.GetValue("lastname")) <br/>
+                
+                <b>Mobile:</b> @member.GetValue("mobile")<br/>
+                
+                <b>Last Online:</b> @member.GetValue("umbracoMemberLastLogin")
+            </p>
+        </div>
+    }
+    
+</div>
+    

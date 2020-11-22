@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("cce98e5e-d809-422c-bd7d-6331c6dbec22"))
+    .ChildrenOfType("projectsItem")
+    .Where( x => x.Value<string>("status")=="Finished")
+    .OrderByDescending(x => x.CreateDate).Take(1);
+}
+<ul>
+    <div class="itemBox">
+    	@foreach (var item in selection)
+    	{
+        		<li>
+        			<a href="@item.Url">@item.Name</a>
+        		</li>
+    	}
+	<div/>
+</ul>
+
